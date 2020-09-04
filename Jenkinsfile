@@ -1,9 +1,23 @@
 pipeline {
     agent any
     stages {
-        stage('Example') {
+        
+        stage('build') {
             steps {
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                echo "building the application"
+            }
+        }
+        
+        stage('test') {
+            steps {
+                echo "testing the application"
+            }
+        }
+       
+        stage('deploy') {
+            steps {
+                echo "deoploying the application"
+                
             }
         }
     }
